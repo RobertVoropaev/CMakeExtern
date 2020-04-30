@@ -1,7 +1,0 @@
-/home/rv/projects/CMakeExtern/build/CMakeFiles/rebuild_cache.dir
-/home/rv/projects/CMakeExtern/build/CMakeFiles/generate_header.dir
-/home/rv/projects/CMakeExtern/build/CMakeFiles/edit_cache.dir
-/home/rv/projects/CMakeExtern/build/CMakeFiles/main.dir
-/home/rv/projects/CMakeExtern/build/B/A/CMakeFiles/rebuild_cache.dir
-/home/rv/projects/CMakeExtern/build/B/A/CMakeFiles/lib.dir
-/home/rv/projects/CMakeExtern/build/B/A/CMakeFiles/edit_cache.dir
