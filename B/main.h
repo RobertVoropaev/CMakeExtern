@@ -1,7 +1,6 @@
 /*!
      \file 
      \brief Главный заголовочный файл системы
-
 */
 
 #include <iostream>
