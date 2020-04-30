@@ -3,16 +3,24 @@ find_package(PythonInterp REQUIRED)
 
 project(cmake_extern)
 
-set(MAIN_DIR B)
+set(MAIN_DIR ${CMAKE_CURRENT_SOURCE_DIR}/B)
 set(INDEX_DIR ${MAIN_DIR}/C)
 set(LIB_DIR ${MAIN_DIR}/A)
 
 set(MAIN_FILE ${MAIN_DIR}/main.h ${MAIN_DIR}/main.cpp)
 set(INDEX_FILE ${INDEX_DIR}/index.h)
+set(PY_PRE_FILE ${INDEX_DIR}/preparing.py)
 
-set(PY_PRE_FILE preparing.py)
-execute_process(COMMAND python3 ${PY_PRE_FILE}
-                WORKING_DIRECTORY ${INDEX_DIR})
+
+add_custom_command(
+    COMMAND "${PYTHON_EXECUTABLE}" 
+    		"${PY_PRE_FILE}" 
+    		--dir "${INDEX_DIR}"    
+    OUTPUT "${INDEX_FILE}")
+
+add_custom_target(generate_header ALL
+    DEPENDS "${INDEX_FILE}")
+
 
 include_directories(${LIB_DIR})
 

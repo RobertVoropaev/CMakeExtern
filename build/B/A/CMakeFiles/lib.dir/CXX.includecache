@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/rv/projects/CMakeExtern/B/A/lib.cpp
+lib.h
+/home/rv/projects/CMakeExtern/B/A/lib.h
+
+/home/rv/projects/CMakeExtern/B/A/lib.h
+iostream
+-
+
